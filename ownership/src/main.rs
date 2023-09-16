@@ -1,16 +1,15 @@
 fn main() {
-    let word = String::from("asd lalala es aris");
+    let word = String::from("inertia function => () -> {}");
     let length = first_word(&word);
     println!("{length}");
 }
 
-fn first_word(s: &String) -> usize {
+fn first_word(s: &String) -> &str {
     let bytes = s.as_bytes();
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
-            return i;
+            return &s[0..i];
         }
     }
-
-    s.len()
+    &s[..]
 }
