@@ -1,14 +1,16 @@
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
 }
 
 fn main() {
+    let scale = 2;
     let rect = Rectangle {
-        width: 412,
+        width: dbg!(412 * scale),
         height: 419,
     };
-
+    println!("{:?}", rect);
     println!("{}", calculate_rectangle_area(&rect));
 }
 
