@@ -1,5 +1,5 @@
 fn main() {
-    print_name(5);
+    print_name(4);
 }
 
 fn print_name(name: i32) {
