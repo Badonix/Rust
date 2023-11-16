@@ -29,7 +29,20 @@ fn main() {
     //     0..=18 => println!("ragac veraris kargad"),
     //     19..=u16::MAX => println!("aq ukve norm"),
     // }
-    let arr_1 = [1, 2, 3, 4, 5, 6, 7, 8, 8];
-    println!("First item is: {}", arr_1[0]);
-    println!("Length of array is: {}", arr_1.len());
+    // let arr_1 = [1, 2, 3, 4, 5, 6, 7, 8, 8];
+    // println!("First item is: {}", arr_1[0]);
+    // println!("Length of array is: {}", arr_1.len());
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let mut arr_idx = 0;
+    loop {
+        if (arr[arr_idx] % 2 == 0) {
+            arr_idx += 1;
+            continue;
+        }
+        if (arr[arr_idx] == 9) {
+            break;
+        }
+        println!("Odd, {}", arr[arr_idx]);
+        arr_idx += 1;
+    }
 }
